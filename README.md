@@ -11,9 +11,13 @@ webflux
 FROM adoptopenjdk/openjdk11  #JDK11에 사용할 경량하된 JDK 
 
 ARG JAR_FILE_PATH=target/*.jar #Target폴더 내 빌드된 Jar파일
+
 COPY ${JAR_FILE_PATH} app.jar # qusrudgkf app.jar 파일 
+
 EXPOSE 1234   # Docker 노출할 Port 
+
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
 CMD ["./mvnw", "clean", "package"]
 
 4. docker build -t prodoneo .
