@@ -9,7 +9,7 @@ webflux
 #컨테이너로 감싸기 
 3. Dockerfile 생성 
 FROM adoptopenjdk/openjdk11  #JDK11에 사용할 경량하된 JDK 
-
+d
 ARG JAR_FILE_PATH=target/*.jar #Target폴더 내 빌드된 Jar파일
 
 COPY ${JAR_FILE_PATH} app.jar # qusrudgkf app.jar 파일 
@@ -39,3 +39,11 @@ C:\Users\mingoo>docker run prodoneo
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.6.1)
+
+7. docker hub
+C:\Users\mingoo>docker search skycmg1234
+NAME                   DESCRIPTION   STARS     OFFICIAL   AUTOMATED
+skycmg1234/echo_test                 0
+skycmg1234/prodoneo                  0
+
+docker hub push
